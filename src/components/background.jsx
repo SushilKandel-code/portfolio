@@ -1,0 +1,20 @@
+import Particles from '../blocks/Backgrounds/Particles/Particles.jsx';
+
+const Background = () => {
+    return (<div style={{ width: '100%', height: '100vh', position: 'fixed', top: 0, left: 0, zIndex: -1 }}>
+        <Particles
+            particleColors={['#ffffff', '#ffffff']}
+            particleCount={200}
+            particleSpread={10}
+            speed={0.2}
+            particleBaseSize={100}
+            moveParticlesOnHover={true}
+            alphaParticles={false}
+            disableRotation={false}
+        />
+    </div>
+    );
+}
+
+export default Background;
+
