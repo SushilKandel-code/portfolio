@@ -7,10 +7,11 @@
   transform: translate3d(0, 0, 0.1px);
   position: relative;
   touch-action: none; 
+  
 }
 
 .pc-card-wrapper::before {
-  content: "";
+
   position: absolute;
   inset: -10px;
   background: inherit;
@@ -37,7 +38,7 @@
 .pc-card {
   height: 100svh;
   max-height: 540px;
-  display: grid;
+  display: flex;
   aspect-ratio: 0.718;
   border-radius: var(--card-radius);
   position: relative;
@@ -81,7 +82,7 @@
 }
 
 .pc-card * {
-  display: grid;
+  /* display: grid; */
   grid-area: 1/-1;
   border-radius: var(--card-radius);
   transform: translate3d(0, 0, 0.1px);
