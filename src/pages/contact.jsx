@@ -1,6 +1,8 @@
 import { useState } from "react";
 import emailjs from "emailjs-com";
 import '../styles/app.css'
+import github from "../images/github.png"
+import linkedin from "../images/linkedin.png"
 
 
 const Contact = () => {
@@ -67,7 +69,7 @@ const Contact = () => {
                 style={{
                     width: "60%",
                     maxWidth: "700px",
-                    padding: "40px",
+                    padding: "30px",
                     borderRadius: "8px",
                     border: '1px solid grey'
                 }}
@@ -164,7 +166,20 @@ const Contact = () => {
                         Contact
                     </button>
                 </form>
+                <br></br>
+                <p style={{ textAlign: 'center', fontSize: '14px', paddingBottom: '40px' }}> OR </p>
+                <div className="ui three row grid" style={{ alignItems: 'center', paddingLeft: '40%', paddingBottom: '10px' }}>
+                    <a href="https://github.com/SushilKandel-code">
+                        <img src={github} alt="github" style={{}} />
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/sushil-kandel-41288a1b9">    
+                    <img src={linkedin} alt="linkedin" style={{}} />
+                    </a>
+
+                </div>
             </div>
+
         </section>
     );
 }

@@ -3,6 +3,7 @@ import Home from "../pages/home.jsx"
 import About from '../pages/about.jsx';
 import Projects from '../pages/project.jsx';
 import Contact from '../pages/contact.jsx';
+import Footer from './footer.jsx';
 
 
 export default function NavBar() {
@@ -67,6 +68,7 @@ export default function NavBar() {
       <About/>
       <Projects/>
       <Contact/>
+      <Footer/>
     </div>
   );
 };
