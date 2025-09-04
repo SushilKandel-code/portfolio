@@ -1,0 +1,140 @@
+.section1 {
+  height: 200vh;
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: white;
+}
+
+.timeline-section {
+  padding: 60px 20px;
+  background: transparent;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.timeline-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 40px 0 20px;
+  padding-top: 20px;
+  text-align: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Timeline base */
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 0px;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: #4f46e5;
+  top: 10px;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+}
+
+/* Timeline containers */
+.timeline-container {
+  padding: 20px 40px;
+  position: relative;
+  width: 50%;
+}
+
+.timeline-container .content {
+  background: rgb(28, 42, 46);
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.timeline-container .content:hover {
+  transform: translateY(-40px);
+}
+
+/* Positioning */
+.timeline-container.left {
+  left: 0;
+}
+
+.timeline-container.right {
+  left: 50%;
+}
+
+/* Circle points */
+.timeline-container::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-color: #4f46e5;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50px;
+  right: -9px;
+  z-index: 1;
+}
+
+.timeline-container.right::before {
+  left: -7px;
+}
+
+/* Text */
+.timeline-container h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-align: left;
+}
+
+.timeline-container .time {
+  display: block;
+  margin: 6px 0 10px;
+  font-size: 1rem;
+  color: #b9bbbf;
+}
+
+.timeline-container ul {
+  margin: 0;
+  padding-left: 15px;
+  color: white;
+  line-height: 1.5;
+  text-align: left;
+  font-size: 18px;
+}
+
+/* Responsive (mobile view: stacked timeline) */
+@media screen and (max-width: 768px) {
+  .timeline::after {
+    left: 30px;
+  }
+
+  .timeline-container {
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 20px;
+  }
+
+  .timeline-container.right {
+    left: 7.5%;
+    
+  }
+
+  .timeline-container::before {
+    left: 22px;
+  }
+}

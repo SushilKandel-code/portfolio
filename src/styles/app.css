@@ -43,13 +43,38 @@ body {
   color: white;
 }
 
-.homeContent{
-  background-color: red;
-  display: contents;
-  
-  position: relative;
-  padding: 0px
+.homeContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.intro {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-family: "Cormorant", serif;
+  font-weight: 800;
+  font-size: 30px;
+}
+
+.profileContent {
+  padding: 3%;
+  display: flex;             
+  align-items:a center;
+  gap: 100px;                  
+}
+
+.content {
+  max-width: 500px;
+  font-size: 18px;
+  text-align: justify;
+  font-family: "Cormorant", serif;
+    font-weight: 400;
+  font-size: 24px;
+}
+
+
 
 /* .content p{
   padding: 10px;

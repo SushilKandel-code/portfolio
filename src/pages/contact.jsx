@@ -121,6 +121,7 @@ const Contact = () => {
                         style={{
                             width: "50%",
                             margin: "0 auto 20px",
+                            height: '100px'
                         }}
                     >
                         <label style={{ color: "white" }}>Message</label>
@@ -131,6 +132,7 @@ const Contact = () => {
                             value={formData.message}
                             onChange={handleChange}
                             required
+                         
                         />
                     </div>
 
