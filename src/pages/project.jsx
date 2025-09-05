@@ -1,9 +1,10 @@
 import '../styles/app.css'
+import ProjectTrail from '../components/projectTrail';
 
 const Projects = () => {
     return(
         <section id="projects" className="section">
-            <h1>Home Section</h1>
+            <ProjectTrail/>
         </section>
     )
 }
