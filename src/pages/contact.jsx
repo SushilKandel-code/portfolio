@@ -55,135 +55,68 @@ const Contact = () => {
     };
 
     return (
-        <section
-            id="contact"
-            className="section"
-            style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                minHeight: "100vh",
-            }}
-        >
-            <div
-                style={{
-                    width: "60%",
-                    maxWidth: "700px",
-                    padding: "30px",
-                    borderRadius: "8px",
-                    border: '1px solid grey'
-                }}
-            >
-                <h2 style={{ textAlign: "center", paddingBottom: "20px" }}>Contact Me</h2>
-                <form
-                    onSubmit={handleSubmit}
-                    className="ui form"
-                    style={{ padding: "20px", borderRadius: "5px" }}
-                >
-                    <div
-                        className="field"
-                        style={{
-                            width: "50%",
-                            margin: "0 auto 20px",
-                        }}
-                    >
-                        <label style={{ color: "white" }}>Name</label>
-                        <input
-                            name="name"
-                            type="text"
-                            placeholder="Your Name"
-                            value={formData.name}
-                            onChange={handleChange}
-                            required
-                        />
-                    </div>
+    <section id="contact" className="section contact-section">
+      <div className="contact-container">
+        <h2>Contact Me</h2>
+        <form onSubmit={handleSubmit} className="contact-form">
+          <div className="field">
+            <label>Name</label>
+            <input
+              name="name"
+              type="text"
+              placeholder="Your Name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="field">
+            <label>Email</label>
+            <input
+              name="email"
+              type="email"
+              placeholder="Your Email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="field">
+            <label>Message</label>
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="field checkbox-field">
+            <input
+              type="checkbox"
+              name="agreed"
+              checked={formData.agreed}
+              onChange={handleChange}
+            />
+            <label>I agree to the terms and conditions</label>
+          </div>
+          <button type="submit" className="submit-btn">
+            Contact
+          </button>
+        </form>
 
-                    <div
-                        className="field"
-                        style={{
-                            width: "50%",
-                            margin: "0 auto 20px",
-                        }}
-                    >
-                        <label style={{ color: "white" }}>Email</label>
-                        <input
-                            name="email"
-                            type="email"
-                            placeholder="Your Email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            required
-                        />
-                    </div>
-
-                    <div
-                        className="field"
-                        style={{
-                            width: "50%",
-                            margin: "0 auto 20px",
-                            height: '100px'
-                        }}
-                    >
-                        <label style={{ color: "white" }}>Message</label>
-                        <input
-                            name="message"
-                            type="text"
-                            placeholder="Your Message"
-                            value={formData.message}
-                            onChange={handleChange}
-                            required
-                         
-                        />
-                    </div>
-
-                    <div
-                        className="field"
-                        style={{
-                            width: "50%",
-                            margin: "0 auto 30px",
-                        }}
-                    >
-                        <div className="ui checkbox">
-                            <input
-                                type="checkbox"
-                                name="agreed"
-                                checked={formData.agreed}
-                                onChange={handleChange}
-                            />
-                            <label style={{ color: "white" }}>
-                                I agree to the terms and conditions
-                            </label>
-                        </div>
-                    </div>
-
-                    <button
-                        type="submit"
-                        className="ui primary button"
-                        style={{
-                            display: "block",
-                            margin: "0 auto", // center the button
-                            padding: "10px 20px",
-                        }}
-                    >
-                        Contact
-                    </button>
-                </form>
-                <br></br>
-                <p style={{ textAlign: 'center', fontSize: '14px', paddingBottom: '40px' }}> OR </p>
-                <div className="ui three row grid" style={{ alignItems: 'center', paddingLeft: '40%', paddingBottom: '10px' }}>
-                    <a href="https://github.com/SushilKandel-code">
-                        <img src={github} alt="github" style={{}} />
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/sushil-kandel-41288a1b9">    
-                    <img src={linkedin} alt="linkedin" style={{}} />
-                    </a>
-
-                </div>
-            </div>
-
-        </section>
-    );
+        <p className="or-text">OR</p>
+        <div className="social-links">
+          <a href="https://github.com/SushilKandel-code">
+            <img src={github} alt="github" />
+          </a>
+          <a href="https://www.linkedin.com/in/sushil-kandel-41288a1b9">
+            <img src={linkedin} alt="linkedin" />
+          </a>
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default Contact;
