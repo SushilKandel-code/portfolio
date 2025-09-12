@@ -1,5 +1,6 @@
 import ProfileCard from "../blocks/Components/ProfileCard/ProfileCard.jsx"
 import profileUrl from "../images/profile.jpg"
+import Contact from '../pages/contact.jsx';
 
 const Profile = () => {
     return (<ProfileCard
@@ -12,7 +13,9 @@ const Profile = () => {
         showUserInfo={true}
         enableTilt={true}
         enableMobileTilt={false}
-        onContactClick={() => console.log('Contact clicked')}
+        onContactClick={() => {
+            <a href="https://github.com/SushilKandel-code"></a>
+        }}
     />);
 }
 

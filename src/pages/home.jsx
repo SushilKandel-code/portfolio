@@ -4,8 +4,6 @@ import Profile from '../components/profileCard.jsx'
 const Home = () => {
     return (
         <section id="home" className="section">
-
-
             <div className="homeContent">
                 <div className="intro">
                     <p>Hi, I’m Sushil Kandel</p>

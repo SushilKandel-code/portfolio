@@ -10,6 +10,7 @@ export default function NavBar() {
   const [activeSection, setActiveSection] = useState("home")
   useEffect(() => {
     const sections = document.querySelectorAll("section");
+    const section1 = document.querySelectorAll("section1")
     const options = {
       threshold: 0.6
     };
@@ -22,6 +23,7 @@ export default function NavBar() {
     }, options);
 
     sections.forEach((section) => observer.observe(section));
+    section1.forEach((sections) => observer.observe(sections));
     return () => observer.disconnect();
 
   }, []);
